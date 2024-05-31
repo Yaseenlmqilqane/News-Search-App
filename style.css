@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+
+    /* color */
+    --clo-text: #212121;
+    --clo-text-light: #fff;
+    --clo-text-secondary: #424242;
+    --clo-bg-primary: #0b52bc;
+    --clo-bg-secondary: #0a4bab;
+
+    /* size */
+    --size-0: 0rem;
+    --size-0-75: 0.75rem;
+    --size-0-875: 0.875rem;
+    --size-1-25: 1.25rem;
+    --size-1-25: 1.5rem;
+    --size-2-5: 2.5rem;
+    --size-1: 1rem;
+    --size-1-5: 1.5rem;
+    --size-1-75: 1.75rem;
+    --size-2-25: 2.25rem;
+    --size-2: 2rem;
+    --size-3: 3rem;
+    --size-3-5: 3.5rem;
+    --size-4: 4rem;
+    --size-4-5: 4.5rem;
+    --size-5: 5rem;
+    --size-5-5: 5.5rem;
+    --size-6: 6rem;
+    --size-7: 7rem;
+    --size-8: 8rem;
+    --size-9: 9rem;
+    --size-10: 10rem;
+
+    /* space */
+    --space-extra-small: 0.75rem;
+    --space-small: 1.5rem;
+    --space-medium: 3rem;
+    --space-large: 4rem;
+    --space-main: 1rem;
+
+    /* letter-spacing */
+    --letter-spacing-0: 0em;
+    --letter-spacing-04: -0.04em;
+
+    /* line-heigh */
+    --lh-main: 1em;
+    --lh-small: 1.1em;
+    --lh-medium: 1.3em;
+    --lh-large: 1.5em;
+
+    /* padding vertical */
+    --pv-main: var(--size-6);
+    --pv-none: var(--size-0);
+    --pv-small: var(--size-1);
+    --pv-large: var(--size-9);
+
+    /* padding horizontal */
+    --ph-main: var(--size-1);
+    --ph-med: var(--size-2);
+    --ph-lg: var(--size-3);
+
+    /* Border width */
+    --bw-main: 1.5px;
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+ul,
+li {
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    background: inherit;
+    color: inherit;
+    border: none;
+}
+
+h1,h2,h3,h4,h5,h5,h6 {
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing-04);
+}
+
+h1 {font-size: var(--size-5);}
+h2 {font-size: var(--size-4);}
+h3 {font-size: var(--size-2);}
+h4 {font-size: var(--size-1-75);}
+h5 {font-size: var(--size-1-5);}
+
+input {
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+
+body {
+    font-family: Roboto;
+    font-size: var(--size-1);
+    font-weight: 400;
+    color: var(--clo-text);
+}
+
+/* Utility */
+.container {
+    max-width: 1080px;
+    padding: 0 3%;
+    margin: auto;
+}
+
+.section {
+    margin: var(--pv-large) 0;
+}
+
+
+
+
+header {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    background: var(--clo-bg-primary);
+}
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.nav__list {
+    margin-left: auto;
+}
+
+.nav__logo-wrap {
+    font-size: var(--size-1-5);
+    font-weight: 600;
+    color: var(--clo-text-light);
+    letter-spacing: var(--letter-spacing-04);
+    line-height: var(--lh-main);
+}
+
+.nav__search {
+    display: flex;
+    align-items: center;
+    gap: var(--size-1);
+}
+.nav__search-bar {
+    width: 300px;
+    height: var(--size-2);
+    padding-left: 16px;
+}
+.nav__search-bar::placeholder {
+    color: var(--clo-text-secondary);
+}
+.nav__search-submit {
+    background-color: var(--clo-text-light);
+    height: var(--size-2);
+    padding: 8px 24px;
+    cursor: pointer;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px hsla(0, 3%, 16%, 0.2);
+}
+
+.card__info {
+    padding: 24px 16px;
+}
+
+
+
+.card__img, .card__title {
+    cursor: pointer;
+}
+
+.card__text {
+    padding-top: var(--ph-main);
+}
